@@ -1,0 +1,46 @@
+<div class="container"> 
+<div class="panel panel-default">
+  <div class="panel-heading">
+          <%if(WebNews.highlighted=="checked")
+            star="glyphicon glyphicon-star";
+            else star="glyphicon glyphicon-star-empty";%>
+  		    <span class="<%=star%>" aria-hidden="true"></span><b> <%=WebNews.name%></b>
+
+      
+  </div>
+  	<div class="panel-body"  class="col-sm-8" style="min-height:360px;max-height:360px;overflow:scroll;">
+  		<div class="col-sm-4" >
+  			<img src="<%=WebNews.image%>" style="max-width:100%;object-fit:cover;display:block; margin:auto;" />
+  		</div>
+  			
+  		<div class="col-sm-8">
+
+            <p><%=WebNews.fullDes%></p><br>
+            <div class="col-sm-6">
+              <div class="row"> 
+      			    <p>Organizer:&nbsp;<%=WebNews.organizer%></p>
+                <p>Venue:&nbsp;<%=WebNews.venue%></p>
+                <p>Quota:&nbsp;<%=WebNews.quota%></p>
+                <p>Remain Quota:&nbsp;<%=WebNews.cquota%></p><br>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="row">
+                <p>Date:&nbsp;<%=WebNews.date%></p>
+                <p>Start Time:&nbsp;<%=WebNews.startTime%></p>
+                <p>End Time:&nbsp;<%=WebNews.endTime%></p>
+                <% if(reg=="UnReg"){%>
+                <a href="/../User/removeRegister?pid=<%=WebNews.id%>" class="btn btn-default navbar-btn">UnReg it</a>
+                <% }else if(WebNews.cquota<=0){%>
+                <a disabled class="btn btn-default navbar-btn">Full</a>
+                <%}else{%>
+                <a href="/../user/addRegister/?pid=<%=WebNews.id%>" class="btn btn-default navbar-btn">Register</a>
+                <%}%>
+              
+              </div>
+            </div>
+            
+  		</div>
+  	</div>
+</div>
+</div>

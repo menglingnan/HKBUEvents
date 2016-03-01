@@ -1,0 +1,29 @@
+"Window": {
+	backgroundColor: "#fff"
+}
+
+"Label": {
+	width: Ti.UI.SIZE,
+	height: Ti.UI.SIZE,
+	color: "#000",
+	font: {
+		fontSize: 20,
+		fontFamily: 'Helvetica Neue'
+	},
+	textAlign: 'center'
+} 
+
+"#mapView": { 
+	region: {
+		latitude: 22.337827,
+		longitude: 114.181962,
+		latitudeDelta: 0.006,
+		longitudeDelta: 0.006
+	}
+}
+"#{VenueID}": {
+	latitude: "22.341072",
+	longitude: "114.179645",
+	title: "{VenueName}",
+	subtitle: "Hong Kong Baptist University Hall" 
+}

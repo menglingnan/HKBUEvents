@@ -1,0 +1,27 @@
+<table> 
+
+	<% persons.forEach( function(model) { %>
+		<tr><td><%=model.name%></td><td><%=model.age%></td></tr>
+	<% }); %>
+		
+</table>
+
+<nav>
+  <ul class="pagination">
+    <!-- <li>
+      <a href="/person/paginate/?page=<%=Math.max(current-1, 1)%>" aria-label="Previous">
+        <span aria-hidden="true">&laquo;</span>
+      </a>
+    </li> -->
+
+    <% for (i = 1; i <= count; i++) { %>
+		<li><a href="/person/paginate/?page=<%=i%>"> <%=i%> </a></li>
+	<%}%>
+ 
+    <!-- <li>
+      <a href="/person/paginate/?page=<%=Math.min(current*1+1, count)%>" aria-label="Next">
+        <span aria-hidden="true">&raquo;</span>
+      </a>
+    </li> -->
+  </ul>
+</nav>

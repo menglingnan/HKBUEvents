@@ -1,0 +1,9 @@
+<Alloy>
+	<Collection src="webNews" />
+	<Window id='win'>
+		<TableView dataCollection="webNews" dataFilter="eventFilter" onClick="eventClick">
+			<TableViewRow layout="vertical" title="{name}" name="{name}"/>				
+		</TableView>
+		
+	</Window>
+</Alloy>

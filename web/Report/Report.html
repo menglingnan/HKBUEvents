@@ -1,0 +1,1058 @@
+<!DOCTYPE html><html>
+
+<head>
+<meta charset="utf-8">
+<title>Report</title>
+<style type="text/css">
+body {
+  font-family: Helvetica, arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: white;
+  padding: 30px; }
+
+body > *:first-child {
+  margin-top: 0 !important; }
+body > *:last-child {
+  margin-bottom: 0 !important; }
+
+a {
+  color: #4183C4; }
+a.absent {
+  color: #cc0000; }
+a.anchor {
+  display: block;
+  padding-left: 30px;
+  margin-left: -30px;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0; }
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 20px 0 10px;
+  padding: 0;
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+  cursor: text;
+  position: relative; }
+
+h1:hover a.anchor, h2:hover a.anchor, h3:hover a.anchor, h4:hover a.anchor, h5:hover a.anchor, h6:hover a.anchor {
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA09pVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoMTMuMCAyMDEyMDMwNS5tLjQxNSAyMDEyLzAzLzA1OjIxOjAwOjAwKSAgKE1hY2ludG9zaCkiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OUM2NjlDQjI4ODBGMTFFMTg1ODlEODNERDJBRjUwQTQiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OUM2NjlDQjM4ODBGMTFFMTg1ODlEODNERDJBRjUwQTQiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo5QzY2OUNCMDg4MEYxMUUxODU4OUQ4M0REMkFGNTBBNCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo5QzY2OUNCMTg4MEYxMUUxODU4OUQ4M0REMkFGNTBBNCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PsQhXeAAAABfSURBVHjaYvz//z8DJYCRUgMYQAbAMBQIAvEqkBQWXI6sHqwHiwG70TTBxGaiWwjCTGgOUgJiF1J8wMRAIUA34B4Q76HUBelAfJYSA0CuMIEaRP8wGIkGMA54bgQIMACAmkXJi0hKJQAAAABJRU5ErkJggg==) no-repeat 10px center;
+  text-decoration: none; }
+
+h1 tt, h1 code {
+  font-size: inherit; }
+
+h2 tt, h2 code {
+  font-size: inherit; }
+
+h3 tt, h3 code {
+  font-size: inherit; }
+
+h4 tt, h4 code {
+  font-size: inherit; }
+
+h5 tt, h5 code {
+  font-size: inherit; }
+
+h6 tt, h6 code {
+  font-size: inherit; }
+
+h1 {
+  font-size: 28px;
+  color: black; }
+
+h2 {
+  font-size: 24px;
+  border-bottom: 1px solid #cccccc;
+  color: black; }
+
+h3 {
+  font-size: 18px; }
+
+h4 {
+  font-size: 16px; }
+
+h5 {
+  font-size: 14px; }
+
+h6 {
+  color: #777777;
+  font-size: 14px; }
+
+p, blockquote, ul, ol, dl, li, table, pre {
+  margin: 15px 0; }
+
+hr {
+  background: transparent url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAECAYAAACtBE5DAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBNYWNpbnRvc2giIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OENDRjNBN0E2NTZBMTFFMEI3QjRBODM4NzJDMjlGNDgiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OENDRjNBN0I2NTZBMTFFMEI3QjRBODM4NzJDMjlGNDgiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo4Q0NGM0E3ODY1NkExMUUwQjdCNEE4Mzg3MkMyOUY0OCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo4Q0NGM0E3OTY1NkExMUUwQjdCNEE4Mzg3MkMyOUY0OCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PqqezsUAAAAfSURBVHjaYmRABcYwBiM2QSA4y4hNEKYDQxAEAAIMAHNGAzhkPOlYAAAAAElFTkSuQmCC) repeat-x 0 0;
+  border: 0 none;
+  color: #cccccc;
+  height: 4px;
+  padding: 0;
+}
+
+body > h2:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+body > h1:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+  body > h1:first-child + h2 {
+    margin-top: 0;
+    padding-top: 0; }
+body > h3:first-child, body > h4:first-child, body > h5:first-child, body > h6:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+
+a:first-child h1, a:first-child h2, a:first-child h3, a:first-child h4, a:first-child h5, a:first-child h6 {
+  margin-top: 0;
+  padding-top: 0; }
+
+h1 p, h2 p, h3 p, h4 p, h5 p, h6 p {
+  margin-top: 0; }
+
+li p.first {
+  display: inline-block; }
+li {
+  margin: 0; }
+ul, ol {
+  padding-left: 30px; }
+
+ul :first-child, ol :first-child {
+  margin-top: 0; }
+
+dl {
+  padding: 0; }
+  dl dt {
+    font-size: 14px;
+    font-weight: bold;
+    font-style: italic;
+    padding: 0;
+    margin: 15px 0 5px; }
+    dl dt:first-child {
+      padding: 0; }
+    dl dt > :first-child {
+      margin-top: 0; }
+    dl dt > :last-child {
+      margin-bottom: 0; }
+  dl dd {
+    margin: 0 0 15px;
+    padding: 0 15px; }
+    dl dd > :first-child {
+      margin-top: 0; }
+    dl dd > :last-child {
+      margin-bottom: 0; }
+
+blockquote {
+  border-left: 4px solid #dddddd;
+  padding: 0 15px;
+  color: #777777; }
+  blockquote > :first-child {
+    margin-top: 0; }
+  blockquote > :last-child {
+    margin-bottom: 0; }
+
+table {
+  padding: 0;border-collapse: collapse; }
+  table tr {
+    border-top: 1px solid #cccccc;
+    background-color: white;
+    margin: 0;
+    padding: 0; }
+    table tr:nth-child(2n) {
+      background-color: #f8f8f8; }
+    table tr th {
+      font-weight: bold;
+      border: 1px solid #cccccc;
+      margin: 0;
+      padding: 6px 13px; }
+    table tr td {
+      border: 1px solid #cccccc;
+      margin: 0;
+      padding: 6px 13px; }
+    table tr th :first-child, table tr td :first-child {
+      margin-top: 0; }
+    table tr th :last-child, table tr td :last-child {
+      margin-bottom: 0; }
+
+img {
+  max-width: 100%; }
+
+span.frame {
+  display: block;
+  overflow: hidden; }
+  span.frame > span {
+    border: 1px solid #dddddd;
+    display: block;
+    float: left;
+    overflow: hidden;
+    margin: 13px 0 0;
+    padding: 7px;
+    width: auto; }
+  span.frame span img {
+    display: block;
+    float: left; }
+  span.frame span span {
+    clear: both;
+    color: #333333;
+    display: block;
+    padding: 5px 0 0; }
+span.align-center {
+  display: block;
+  overflow: hidden;
+  clear: both; }
+  span.align-center > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px auto 0;
+    text-align: center; }
+  span.align-center span img {
+    margin: 0 auto;
+    text-align: center; }
+span.align-right {
+  display: block;
+  overflow: hidden;
+  clear: both; }
+  span.align-right > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px 0 0;
+    text-align: right; }
+  span.align-right span img {
+    margin: 0;
+    text-align: right; }
+span.float-left {
+  display: block;
+  margin-right: 13px;
+  overflow: hidden;
+  float: left; }
+  span.float-left span {
+    margin: 13px 0 0; }
+span.float-right {
+  display: block;
+  margin-left: 13px;
+  overflow: hidden;
+  float: right; }
+  span.float-right > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px auto 0;
+    text-align: right; }
+
+code, tt {
+  margin: 0 2px;
+  padding: 0 5px;
+  white-space: nowrap;
+  border: 1px solid #eaeaea;
+  background-color: #f8f8f8;
+  border-radius: 3px; }
+
+pre code {
+  margin: 0;
+  padding: 0;
+  white-space: pre;
+  border: none;
+  background: transparent; }
+
+.highlight pre {
+  background-color: #f8f8f8;
+  border: 1px solid #cccccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px; }
+
+pre {
+  background-color: #f8f8f8;
+  border: 1px solid #cccccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px; }
+  pre code, pre tt {
+    background-color: transparent;
+    border: none; }
+
+sup {
+    font-size: 0.83em;
+    vertical-align: super;
+    line-height: 0;
+}
+* {
+	-webkit-print-color-adjust: exact;
+}
+@media screen and (min-width: 914px) {
+    body {
+        width: 854px;
+        margin:0 auto;
+    }
+}
+@media print {
+	table, pre {
+		page-break-inside: avoid;
+	}
+	pre {
+		word-wrap: break-word;
+	}
+}
+</style>
+<style type="text/css">
+/**
+ * prism.js default theme for JavaScript, CSS and HTML
+ * Based on dabblet (http://dabblet.com)
+ * @author Lea Verou
+ */
+
+code[class*="language-"],
+pre[class*="language-"] {
+	color: black;
+	text-shadow: 0 1px white;
+	font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+	direction: ltr;
+	text-align: left;
+	white-space: pre;
+	word-spacing: normal;
+	word-break: normal;
+	word-wrap: normal;
+	line-height: 1.5;
+
+	-moz-tab-size: 4;
+	-o-tab-size: 4;
+	tab-size: 4;
+
+	-webkit-hyphens: none;
+	-moz-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
+}
+
+pre[class*="language-"]::-moz-selection, pre[class*="language-"] ::-moz-selection,
+code[class*="language-"]::-moz-selection, code[class*="language-"] ::-moz-selection {
+	text-shadow: none;
+	background: #b3d4fc;
+}
+
+pre[class*="language-"]::selection, pre[class*="language-"] ::selection,
+code[class*="language-"]::selection, code[class*="language-"] ::selection {
+	text-shadow: none;
+	background: #b3d4fc;
+}
+
+@media print {
+	code[class*="language-"],
+	pre[class*="language-"] {
+		text-shadow: none;
+	}
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+	padding: 1em;
+	margin: .5em 0;
+	overflow: auto;
+}
+
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+	background: #f5f2f0;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+	padding: .1em;
+	border-radius: .3em;
+	white-space: normal;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+	color: slategray;
+}
+
+.token.punctuation {
+	color: #999;
+}
+
+.namespace {
+	opacity: .7;
+}
+
+.token.property,
+.token.tag,
+.token.boolean,
+.token.number,
+.token.constant,
+.token.symbol,
+.token.deleted {
+	color: #905;
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+	color: #690;
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string {
+	color: #a67f59;
+	background: hsla(0, 0%, 100%, .5);
+}
+
+.token.atrule,
+.token.attr-value,
+.token.keyword {
+	color: #07a;
+}
+
+.token.function {
+	color: #DD4A68;
+}
+
+.token.regex,
+.token.important,
+.token.variable {
+	color: #e90;
+}
+
+.token.important,
+.token.bold {
+	font-weight: bold;
+}
+.token.italic {
+	font-style: italic;
+}
+
+.token.entity {
+	cursor: help;
+}
+</style>
+</head>
+<body>
+<h1 id="toc_0">Web and Mobile App for Event System</h1>
+
+<p><br>
+<p align="right">
+Mini Project Features Report<br>
+1st Dec, 2015<br>
+MENG Lingnan<br>
+15432548</p>
+<br></p>
+
+<h2 id="toc_1">Introduction</h2>
+
+<p>In this Event Management System, there are three types of registered users <strong>(admin, staff and member)</strong>. Each role of these three user groups has some similar functions and different authorities.</p>
+
+<p>In this report, I will introduce the features in three roles respectively.</p>
+
+<h2 id="toc_2">Data Structure</h2>
+
+<p>In web part, we have two models named <code>User</code> and <code>WebNews</code> (representing events) associated with each other. User can register the events. Event can be registered by </p>
+
+<pre><code class="language-javascript">[ { &quot;username&quot;: &quot;Sally&quot;,
+    &quot;password&quot;: &quot;123456&quot;,
+    &quot;role&quot;: &quot;admin&quot;,
+    &quot;id&quot;: 1,
+    &quot;createdAt&quot;: &quot;2015-11-25T04:35:12.225Z&quot;,
+    &quot;updatedAt&quot;: &quot;2015-11-29T03:02:24.274Z&quot;},
+  {
+    &quot;username&quot;: &quot;Martin&quot;,
+    &quot;password&quot;: &quot;123456&quot;,
+    &quot;role&quot;: &quot;staff&quot;,
+    &quot;dept&quot;: &quot;Computer Science&quot;,
+    &quot;id&quot;: 2,
+    &quot;createdAt&quot;: &quot;2015-11-25T04:35:12.226Z&quot;,
+    &quot;updatedAt&quot;: &quot;2015-11-28T12:53:04.182Z&quot;},
+  {
+    &quot;username&quot;: &quot;Cindy&quot;,
+    &quot;password&quot;: &quot;123456&quot;,
+    &quot;role&quot;: &quot;student&quot;,
+    &quot;dept&quot;: &quot;Computer Science&quot;,
+    &quot;id&quot;: 3,
+    &quot;createdAt&quot;: &quot;2015-11-25T04:35:12.227Z&quot;,
+    &quot;updatedAt&quot;: &quot;2015-11-25T09:29:58.875Z&quot;} 
+]</code></pre>
+
+<pre><code class="language-javascript">[ {
+    &quot;name&quot;: &quot;Singing Contest&quot;,
+    &quot;shortDes&quot;: &quot;一年一度既HKBU Singing Contest又到喇！身為浸大人既你點可能錯過！？無論你係咩系、Bachelor/AD Promgramme，我地都歡迎你報名！身邊有唱得之人就梗係要推薦佢黎喇！&quot;,
+    &quot;fullDes&quot;: &quot;一年一度既HKBU Singing Contest又到喇！身為浸大人既你點可能錯過！？無論你係咩系、Bachelor/AD Promgramme，我地都歡迎你報名！身邊有唱得之人就梗係要推薦佢黎喇！ 主辦單位：音樂學會 報名日期：4/2-8/2 (12-6pm) 報名地點：Main Podium 詳情可閱Poster 或去到報名Counter查詢&quot;,
+    &quot;image&quot;: &quot;https://scontent-hkg3-1.xx.fbcdn.net/hphotos-xfa1/v/t1.0-9/537765_488319141230614_2037745642_n.jpg?oh=7aa48d32b25169e36c8a131255123ebe&amp;oe=56645008&quot;,
+    &quot;venue&quot;: &quot;AC Hall&quot;,
+    &quot;organizer&quot;: &quot;Music Society&quot;,
+    &quot;date&quot;: &quot;2015-12-12&quot;,
+    &quot;startTime&quot;: &quot;19:30&quot;,
+    &quot;endTime&quot;: &quot;23:30&quot;,
+    &quot;quota&quot;: &quot;10&quot;,
+    &quot;highlighted&quot;: &quot;checked&quot;,
+    &quot;id&quot;: 1,
+    &quot;createdAt&quot;: &quot;2015-11-25T04:35:12.231Z&quot;,
+    &quot;updatedAt&quot;: &quot;2015-11-25T04:35:12.231Z&quot;
+  } ]</code></pre>
+
+<h2 id="toc_3">Log in</h2>
+
+<p><link rel="stylesheet" href="/styles/importer.css">
+<link href="http://libs.baidu.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
+<script src="/js/dependencies/sails.io.js"></script>
+<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+<script src="http://libs.baidu.com/bootstrap/3.0.3/js/bootstrap.min.js"></script></p>
+
+<div class="container"> 
+<nav class="navbar navbar-default" role="navigation">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#Home">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span> 
+          </button>
+          <a class="navbar-brand" href="#">Home</a>
+      </div>
+      <div class="collapse navbar-collapse " id="Home">
+            <ul class="nav navbar-nav">
+             <li><a href="#">Search</a></li>
+            </ul>   
+          <ul class="nav navbar-nav navbar-right">
+                <li><a href="#">Login</a></li> 
+          </ul>
+        </div>
+      </div>
+    </nav>
+</div>
+
+<p>Before users log in the system, the menu will be like above. If userInfo in session is null, then <code>login</code> button will show up and any function needing log in will not show up in the menu to prevent errors. </p>
+
+<pre><code class="language-markup">&lt;ul class=&quot;nav navbar-nav navbar-right&quot;&gt;
+    &lt;li class=&quot;dropdown&quot;&gt;
+    &lt;%  if(session.userInfo!=null){ %&gt;
+        &lt;a  href=&quot;#&quot; class=&quot;dropdown-toggle&quot; data-toggle=&quot;dropdown&quot; 
+            role=&quot;button&quot; aria-haspopup=&quot;true&quot; aria-expanded=&quot;false&quot;&gt;
+            Hello, &lt;%=session.userInfo.username%&gt; &lt;span class=&quot;caret&quot;&gt;&lt;/span&gt;&lt;/a&gt;
+        &lt;ul class=&quot;dropdown-menu&quot;&gt;
+            &lt;li&gt;&lt;a href=&quot;/../user/showRegister/&quot;&gt;Registered Events&lt;/a&gt;&lt;/li&gt; 
+            &lt;li role=&quot;separator&quot; class=&quot;divider&quot;&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;/../user/logout&quot;&gt;logout&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/li&gt;
+    &lt;%  }else  { %&gt;
+    &lt;li&gt;&lt;a href=&quot;/../user/login&quot;&gt;Login&lt;/a&gt;&lt;/li&gt; 
+    &lt;%  } %&gt;
+&lt;/ul&gt;</code></pre>
+
+<p>If the users make mistakes when log in the system, there will be alerts like below.  </p>
+
+<div class="container"> 
+<div class="col-md-4">
+<h3 align="center">Login</h3>
+<label for="inputUsername" class="sr-only">Username</label>
+<input type="text" id="inputUsername" class="form-control" placeholder="Username" required  name="username">
+<div class="alert alert-warning">
+    <strong>Username</strong> does not exist.
+</div>
+<label for="inputPassword" class="sr-only">Password</label>
+<input type="password" id="inputPassword" class="form-control" 
+        placeholder="Password" required name="password">
+<div class="alert alert-danger">
+ <strong>Password</strong> is wrong.
+</div>
+<button class="btn btn-lg btn-primary btn-block" type="submit">
+     Sign in</button>
+<p>No Account? Register <a href="#">here!</a></p>
+</div>
+</div>
+
+<h2 id="toc_4">View and Register Event</h2>
+
+<p>When you click on one  event, you will come to the detail page of the event. In this page, youcan view the event and register it. The &#39;Register&#39; button will be different subject to the quota. If you have not logged in, this button will redirect you to the login page. If you have logged in and remaining quota is more than 0, clicking on  this button will register the event for you. </p>
+
+<p>The event will be marked with a star if it is highlighted, or will be marked with a empty star.</p>
+
+<div class="container"> 
+<div class="panel panel-default">
+  <div class="panel-heading"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>Singing Contest</div>
+    <div class="panel-body"  class="col-sm-8" style="min-height:300px;max-height:300px;overflow:scroll;">
+        <div class="col-sm-4" >
+            <img src="https://scontent-hkg3-1.xx.fbcdn.net/hphotos-xfa1/v/t1.0-9/537765_488319141230614_2037745642_n.jpg?oh=7aa48d32b25169e36c8a131255123ebe&oe=56645008" style="max-width:100%;object-fit:cover;display:block; margin:auto;" />
+        </div>
+        <div class="col-sm-8">
+            <p>一年一度既HKBU Singing Contest又到喇！身為浸大人既你點可能錯過！？無論你係咩系、Bachelor/AD Promgramme，我地都歡迎你報名！身邊有唱得之人就梗係要推薦佢黎喇！ 主辦單位：音樂學會 報名日期：4/2-8/2 (12-6pm) 報名地點：Main Podium 詳情可閱Poster 或去到報名Counter查詢</p><br>
+            <div class="col-sm-6">
+              <div class="row"> 
+                    <p>Organizer: Music Society</p>
+                    <p>Venue: AC Hall</p>
+                    <p>Quota: 10</p>
+                    <p>Remain Quota: 5</p><br>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="row">
+                <p>Date: 2015-12-12</p>
+                <p>Start Time: 19:30</p>
+                <p>End Time: 23:30</p>
+                <a href="#" class="btn btn-default navbar-btn">Register</a>
+              </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<p>If the remaining quota is equal to 0, you cannot register it any more. The button will become disabled and show message <code>Full</code> on it. </p>
+
+<div class="container"> 
+<div class="panel panel-default">
+  <div class="panel-heading"><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span>Culture and Politics in European Cinema</div>
+    <div class="panel-body"  class="col-sm-8" style="min-height:300px;max-height:300px;overflow:scroll;">
+        <div class="col-sm-4" >
+            <img src="http://gis.hkbu.edu.hk/events/20150925-1023.jpg" style="max-width:100%;object-fit:cover;display:block; margin:auto;" />
+        </div>
+        <div class="col-sm-8">
+            <p>Michael Balcon and Twentieth Century British Cinema: Art, Industry and National Culture. Dr. Mark Hampton.</p><br>
+            <div class="col-sm-6">
+              <div class="row"> 
+                    <p>Organizer: Government and International Studies</p>
+                    <p>Venue: SWT501</p>
+                    <p>Quota: 5</p>
+                    <p>Remain Quota: 0</p><br>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="row">
+                <p>Date: 2015-11-11</p>
+                <p>Start Time: 19:00</p>
+                <p>End Time: 21:00</p>
+                <a disabled class="btn btn-default navbar-btn">Full</a>
+              </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<p>If you have registered this event, then the button will become a <code>UnReg</code> button. You can cancel the registration on this event by clicking on it.</p>
+
+<div class="container"> 
+<div class="panel panel-default">
+  <div class="panel-heading"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>Workshop on Design for Sustainability</div>
+    <div class="panel-body"  class="col-sm-8" style="min-height:300px;max-height:300px;overflow:scroll;">
+        <div class="col-sm-4" >
+            <img src="http://www.comp.hkbu.edu.hk/fieldinformatics/images/2015/poster.png" style="max-width:100%;object-fit:cover;display:block; margin:auto;" />
+        </div>
+        <div class="col-sm-8">
+            <p>Aspects to focus on Design green partnership agreement between Kyoto and Hong Kong Ex. Low-carbon society, waste management, etc. Discover cultural differences Forcibly ideate green solutions using the cultural differences Extend the ideas by combining participants’ research topics.</p><br>
+            <div class="col-sm-6">
+              <div class="row"> 
+                    <p>Organizer: Music Society</p>
+                    <p>Venue: AC Hall</p>
+                    <p>Quota: 10</p>
+                    <p>Remain Quota: 5</p><br>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="row">
+                <p>Date: 2015-12-12</p>
+                <p>Start Time: 19:30</p>
+                <p>End Time: 23:30</p>
+                <a href="#" class="btn btn-default navbar-btn">UnReg it</a>
+              </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<p>The html code is shown below. The link of button is determined in this page subject to the value of <code>reg</code>.</p>
+
+<pre><code class="language-markup">    &lt;% if(reg==&quot;UnReg&quot;){%&gt;
+    &lt;a  href=&quot;/../User/removeRegister?pid=&lt;%=WebNews.id%&gt;&quot; 
+        class=&quot;btn btn-default navbar-btn&quot;&gt;UnReg it&lt;/a&gt;
+    &lt;% } else if(WebNews.cquota&lt;=0) { %&gt;
+    &lt;a disabled class=&quot;btn btn-default navbar-btn&quot;&gt;Full&lt;/a&gt;
+    &lt;%} else {%&gt;
+    &lt;a  href=&quot;/../user/addRegister/?pid=&lt;%=WebNews.id%&gt;&quot;
+        class=&quot;btn btn-default navbar-btn&quot;&gt;Register
+    &lt;/a&gt;
+&lt;%}%&gt;</code></pre>
+
+<p>The value of <code>reg</code> should be set in <code>UserController.js</code>. It is a flag recording the status of User and Events.</p>
+
+<pre><code class="language-javascript">view: function (req, res) {
+    WebNews.findOne(req.params.id).exec( function(err, mod) {
+        if (mod != null){
+            var reg=&quot;&quot;;
+            if(req.session.userInfo==null){
+                WebNews.findOne(req.params.id).populateAll().exec(function (err, m) {
+                    mod.cquota = mod.quota - m.registeredBy.length;        
+                    return res.view(&#39;WebNews/view&#39;, {&#39;WebNews&#39;: mod,&#39;reg&#39;:&quot;Reg&quot;});
+                });
+            } else {
+                WebNews.findOne(req.params.id).populateAll({id:req.session.userInfo.id})
+                .exec( function (err, model) {
+                WebNews.findOne(req.params.id).populateAll().exec(function (err, m) {
+                    model.cquota = model.quota - m.registeredBy.length;
+                    if(model.registeredBy.length!=0)
+                        reg = &quot;UnReg&quot;;
+                    else reg = &quot;Reg&quot;;
+                        return res.view(&#39;WebNews/view&#39;, {&#39;WebNews&#39;: model,&#39;reg&#39;:reg});
+                    });
+                });
+            } 
+        } else
+            return res.send(&quot;No such Event&quot;);
+    });
+}</code></pre>
+
+<h2 id="toc_5">Administrator</h2>
+
+<p>In this system, there is only one administrator with the rights to create, update and delete any events there. Administrator can also view all the registered members of an event.</p>
+
+<p>Sally is administator in this system. After Sally logging in the system, the login button will change into a dropdown menu containing <code>Registered Events</code> and <code>Logout</code> function.</p>
+
+<div class="container"> 
+<nav class="navbar navbar-default" role="navigation">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#Home1">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span> 
+          </button>
+          <a class="navbar-brand" href="#">Home</a>
+        </div>
+        <div class="collapse navbar-collapse" id="Home1">
+          <ul class="nav navbar-nav">
+              <li><a href="#">Search</a></li>
+              <li><a href="#">Create</a></li>
+              <li><a href="#">Admin</a></li>
+          </ul>   
+          <ul class="nav navbar-nav navbar-right">
+                 <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                Hello, Sally <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Registered Events</a></li> 
+                <li role="separator" class="divider"></li>
+                <li><a href="#">logout</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+</div>
+
+<p>In the <code>admin</code> function of the administrator, Sally can edit or delete all the events of any department. But for staff, they only can edit and delete the events belonging to their department.</p>
+
+<pre><code class="language-javascript">admin: function(req, res) {
+    if(req.session.userInfo.role==&quot;admin&quot;){
+      WebNews.find().sort(&#39;highlighted desc&#39;).exec( function(err, WebNews) {
+        return res.view(&#39;WebNews/admin&#39;, {&#39;WebNews&#39;: WebNews});
+      });
+    }
+    else{
+      WebNews.find().sort(&#39;highlighted desc&#39;)
+      .where({organizer: req.session.userInfo.dept})
+      .exec( function(err, WebNews) {
+        return res.view(&#39;WebNews/admin&#39;, {&#39;WebNews&#39;: WebNews});
+      });
+    }
+        
+}</code></pre>
+
+<h2 id="toc_6">Staff</h2>
+
+<p>After the staff, for example, Martin, the teacher of Computer Sciende department logging in the system, he will see a menu like below.</p>
+
+<div class="container"> 
+<nav class="navbar navbar-default" role="navigation">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#Home2">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span> 
+          </button>
+          <a class="navbar-brand" href="#">Home</a>
+        </div>
+        <div class="collapse navbar-collapse" id="Home2">
+          <ul class="nav navbar-nav">
+              <li><a href="#">Search</a></li>
+              <li><a href="#">Create</a></li>
+              <li><a href="#">Edit</a></li>
+          </ul>   
+          <ul class="nav navbar-nav navbar-right">
+                 <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                Hello, Martin <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Registered Events</a></li> 
+                <li role="separator" class="divider"></li>
+                <li><a href="#">logout</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+</div>
+
+<p>Staff as well as administrator can create a new event. Staff can create events belonging to his department, while administrator can create events under all department, which is similar to Edit function.</p>
+
+<pre><code class="language-markup">&lt;div class=&quot;form-group&quot;&gt;
+    &lt;label class=&quot;control-label col-sm-2&quot;&gt;Organizer: &lt;/label&gt;
+        &lt;div class=&quot;col-sm-8&quot;&gt;
+            &lt;select class=&quot;form-control&quot; name=&quot;WebNews[organizer]&quot;&gt;
+            &lt;% if(req.session.userInfo.role!=&quot;admin&quot;){%&gt;
+                &lt;option&gt;&lt;%=req.session.userInfo.dept%&gt;&lt;/option&gt;
+            &lt;%} else{%&gt;
+                &lt;option&gt;Computer Science&lt;/option&gt;
+                &lt;option&gt;Music Society&lt;/option&gt;
+                &lt;option&gt;Government and International Studies&lt;/option&gt;
+                &lt;option&gt;Academic of Film&lt;/option&gt;
+            &lt;%} %&gt;
+            &lt;/select&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;</code></pre>
+
+<h2 id="toc_7">Student</h2>
+
+<p>After the student, for example, Cindy, a student of Computer Sciende department logging in the system, she will see a menu like below.</p>
+
+<div class="container"> 
+<nav class="navbar navbar-default" role="navigation">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#Home3">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span> 
+          </button>
+          <a class="navbar-brand" href="#">Home</a>
+        </div>
+        <div class="collapse navbar-collapse" id="Home3">
+          <ul class="nav navbar-nav">
+              <li><a href="#">Search</a></li>
+          </ul>   
+          <ul class="nav navbar-nav navbar-right">
+                 <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                Hello, Cindy <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Registered Events</a></li> 
+                <li role="separator" class="divider"></li>
+                <li><a href="#">logout</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+</div>
+
+<p>Before display the menu, the system will have a judgement what role the user is. If no login information or the user is student, the menu will only shows <code>Home</code> and <code>Search</code> button in navbar. If the user is not student which means he is administrator or staff, then the menu will add a <code>create</code> button and an <code>admin</code> button (for administrator) or an <code>Edit</code> button (for staff). </p>
+
+<pre><code class="language-markup">&lt;div class=&quot;collapse navbar-collapse&quot; id=&quot;Home&quot;&gt;
+    &lt;ul class=&quot;nav navbar-nav&quot;&gt;
+        &lt;li&gt;&lt;a href=&quot;/../WebNews/search&quot;&gt;Search&lt;/a&gt;&lt;/li&gt;
+        &lt;%  if(session.userInfo!=null){ 
+                if(session.userInfo.role != &quot;student&quot;){%&gt;
+        &lt;li&gt;&lt;a href=&quot;/../WebNews/create&quot;&gt;Create&lt;/a&gt;&lt;/li&gt;
+                &lt;% if(session.userInfo.role == &quot;admin&quot;){%&gt;
+        &lt;li&gt;&lt;a href=&quot;/../WebNews/admin&quot;&gt;Admin&lt;/a&gt;&lt;/li&gt; 
+                &lt;% }else {%&gt; 
+        &lt;li&gt;&lt;a href=&quot;/../WebNews/admin&quot;&gt;Edit&lt;/a&gt;&lt;/li&gt; 
+            &lt;%}} } %&gt;
+    &lt;/ul&gt;  
+&lt;/div&gt;</code></pre>
+
+<h2 id="toc_8">Mobile App</h2>
+
+<p>The Mobile App use json provided in web as the database. A new model named <code>RegList</code> should be created to get the user&#39;s registered list.</p>
+
+<pre><code class="language-javascript">exports.definition = {
+    config: {
+        &quot;columns&quot;: {
+            &quot;id&quot;:&quot;INTEGER PRIMARY KEY&quot;,
+            &quot;name&quot;:&quot;text&quot;,
+            &quot;venue&quot;:&quot;text&quot;,
+            &quot;date&quot;:&quot;text&quot;,
+            &quot;startTime&quot;:&quot;text&quot;,
+            &quot;endTime&quot;:&quot;text&quot;,
+            &quot;organizer&quot;:&quot;text&quot;,
+            &quot;quota&quot;:&quot;text&quot;,
+            &quot;shortDes&quot;:&quot;text&quot;,
+            &quot;fullDes&quot;:&quot;text&quot;,
+            &quot;image&quot;:&quot;text&quot;,
+            &quot;createdAt&quot;:&quot;text&quot;, 
+            &quot;updatedAt&quot;:&quot;text&quot;
+        },
+        &quot;URL&quot;: &quot;http://localhost:1337/user/showR&quot;,
+        &quot;debug&quot;: 1, //debug mode enabled
+        &quot;adapter&quot; : {
+            &quot;type&quot; : &quot;sqlrest&quot;,
+            &quot;collection_name&quot; : &quot;regList&quot;,
+            &quot;idAttribute&quot; : &quot;id&quot;
+        }
+    }</code></pre>
+
+<p>The <code>showR</code> function is create in web part. It will return all the registered events of the user.</p>
+
+<pre><code class="language-javascript">showR:  function( req, res) {
+        User.findOne(req.session.userInfo.id).populateAll().exec( function (err, model) {
+            return res.json(model.register);
+        })
+    },</code></pre>
+
+<p>Open the mobile app, and user will see the events list page. User can view the short descriptions of all the events on this page. Tap one event, and user can view the full information of that event.</p>
+
+<p><image src="Detail_login.png" width="250">
+<image src="login_tab1.png" width="250"></p>
+
+<p>If users have not logged in the system, the right button of the navbar will show <code>login</code>. Tap the <code>login</code>, then users will come to the login page to input their username and password.</p>
+
+<pre><code class="language-javascript">function login(e) {
+        var username = $.username.value;
+        var password = $.password.value;
+        var thisuser = Alloy.Collections.UserList.where({username:username,password:password});
+        console.log(JSON.stringify(thisuser));
+        if(JSON.stringify(thisuser)!=&quot;[]&quot;){
+            var userid = thisuser[0].get(&quot;id&quot;);//at(0).get(&quot;uid&quot;);
+            Alloy.Globals.meid = userid;
+            var xhr = Ti.Network.createHTTPClient();
+            xhr.onload = function(e){};
+            xhr.open(&#39;POST&#39;,&#39;http://localhost:1337/user/login&#39;);
+            xhr.send({
+                &quot;username&quot;:username,
+                &quot;password&quot;:password
+            });
+        }
+        if(Alloy.Globals.meid!=0) {
+            var eventListController = Alloy.createController(&#39;UserInfo&#39;);
+            if(Alloy.Globals.tabgroup.getActiveTab()==Alloy.Globals.logTab){
+                Alloy.Globals.tabgroup.getActiveTab().open(eventListController.getView());
+            }else {
+                $.win.close();
+                Alloy.Globals.eventDetailWin.close();
+                var eventListController = Alloy.createController(&#39;eventDetail&#39;,{
+                    name: Alloy.Globals.logename
+                });
+                Alloy.Globals.tabgroup.getActiveTab().open(eventListController.getView());
+            }
+        }
+}</code></pre>
+
+<p><image src="Detail_Register.png" width="250">
+<image src="Reg_confirm.png" width="250">
+<image src="Reg_success.png" width="250"></p>
+
+<p>The following code is to show the confirm box.</p>
+
+<pre><code class="language-javascript">function Register(e) {
+    if($.regButton.title==&quot;Login&quot;){
+        Alloy.Globals.logename=name;
+        var eventListController=Alloy.createController(&#39;Login&#39;);
+        Alloy.Globals.tabgroup.getActiveTab().open(eventListController.getView());
+    }else if($.regButton.title==&quot;Register&quot;){
+        $.regit.title=&quot;You will register this event.&quot;;
+        $.regit.message=&quot;Are you sure?&quot;;
+        $.regit.show();
+    }else if($.regButton.title==&quot;Registered&quot;){
+        $.regit.title=&quot;You will Unregister this event.&quot;;
+        $.regit.message=&quot;Are you sure?&quot;;    
+        $.regit.show();
+    }
+    
+}</code></pre>
+
+<p>After logging in the system, if user have not registered the event, the right button of the navbar will show <code>Register</code>. User can tap the <code>Register</code> to confirm the registration on the event.</p>
+
+<p><image src="Detail_Registered.png" width="250">
+<image src="UnReg_confirm.png" width="250">
+<image src="UnReg_success.png" width="250"></p>
+
+<p>The following code shows how to realize the <code>Reg</code> and <code>UnReg</code> function in js.</p>
+
+<pre><code class="language-javascript">function confirm(e){
+    if($.regButton.title==&quot;Register&quot;){
+            var xhr = Ti.Network.createHTTPClient();
+            xhr.onload = function(e){};
+            xhr.open(&#39;POST&#39;,&#39;http://localhost:1337/user/addRegister/?pid=&#39;+eid);
+            xhr.send();
+            
+            var model = Alloy.createModel(&#39;regList&#39;,{id:eid,uid:Alloy.Globals.meid});
+            Alloy.Collections.regList.add(model);
+            model.save();
+            $.regButton.title=&quot;Registered&quot;;
+            alert(&quot;Successfully Registered&quot;);
+    }else{
+            var xhr = Ti.Network.createHTTPClient();
+            xhr.onload = function(e){};
+            xhr.open(&#39;POST&#39;,&#39;http://localhost:1337/user/removeRegister/?pid=&#39;+eid);
+            xhr.send();
+            
+            var model = Alloy.Collections.regList.where({id:eid})[0];
+            var rest = Alloy.Collections.regList.where({id:eid});
+            console.log(&quot;before&quot;+rest.length);
+            Alloy.Collections.regList.remove(model);
+            rest = Alloy.Collections.regList.where({id:eid});
+        
+            model.destroy();
+            $.regButton.title=&quot;Register&quot;;
+            alert(&quot;You have Unregisterer it&quot;);
+    }
+}</code></pre>
+
+<p>After logging in the system, if user have registered the event, the right button of the navbar will show <code>Registered</code>. User can tap the <code>Registered</code> to cancel the registration on the event.</p>
+
+<p><image src="login.png" width="250">
+<image src="me.png" width="250">
+<image src="myevent.png" width="250"></p>
+
+<p>User also can login in <strong>Tab 5</strong>. In this tab, user can check his registered event and the detail of the events.</p>
+
+<pre><code class="language-javascript">if(Alloy.Globals.meid==0||Alloy.Globals.meid==null){
+    var eventListController = Alloy.createController(&#39;Login&#39;);
+    $.logTab.open(eventListController.getView());
+}
+$.logTab.addEventListener(&#39;focus&#39;,function(e) { 
+    if(Alloy.Globals.meid==0||Alloy.Globals.meid==null){
+        var eventListController = Alloy.createController(&#39;Login&#39;);
+        $.logTab.open(eventListController.getView());
+    }else {
+        var eventListController = Alloy.createController(&#39;UserInfo&#39;);
+        Alloy.Globals.tabgroup.getActiveTab().open(eventListController.getView());
+    }
+});</code></pre>
+
+<p>The code above is to judge whether the user has logged in or not. <code>Alloy.Globals.meid</code> saves the user id after login.</p>
+
+<script type="text/javascript">
+var _self="undefined"!=typeof window?window:"undefined"!=typeof WorkerGlobalScope&&self instanceof WorkerGlobalScope?self:{},Prism=function(){var e=/\blang(?:uage)?-(?!\*)(\w+)\b/i,t=_self.Prism={util:{encode:function(e){return e instanceof n?new n(e.type,t.util.encode(e.content),e.alias):"Array"===t.util.type(e)?e.map(t.util.encode):e.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/\u00a0/g," ")},type:function(e){return Object.prototype.toString.call(e).match(/\[object (\w+)\]/)[1]},clone:function(e){var n=t.util.type(e);switch(n){case"Object":var a={};for(var r in e)e.hasOwnProperty(r)&&(a[r]=t.util.clone(e[r]));return a;case"Array":return e.map&&e.map(function(e){return t.util.clone(e)})}return e}},languages:{extend:function(e,n){var a=t.util.clone(t.languages[e]);for(var r in n)a[r]=n[r];return a},insertBefore:function(e,n,a,r){r=r||t.languages;var l=r[e];if(2==arguments.length){a=arguments[1];for(var i in a)a.hasOwnProperty(i)&&(l[i]=a[i]);return l}var o={};for(var s in l)if(l.hasOwnProperty(s)){if(s==n)for(var i in a)a.hasOwnProperty(i)&&(o[i]=a[i]);o[s]=l[s]}return t.languages.DFS(t.languages,function(t,n){n===r[e]&&t!=e&&(this[t]=o)}),r[e]=o},DFS:function(e,n,a){for(var r in e)e.hasOwnProperty(r)&&(n.call(e,r,e[r],a||r),"Object"===t.util.type(e[r])?t.languages.DFS(e[r],n):"Array"===t.util.type(e[r])&&t.languages.DFS(e[r],n,r))}},plugins:{},highlightAll:function(e,n){for(var a,r=document.querySelectorAll('code[class*="language-"], [class*="language-"] code, code[class*="lang-"], [class*="lang-"] code'),l=0;a=r[l++];)t.highlightElement(a,e===!0,n)},highlightElement:function(n,a,r){for(var l,i,o=n;o&&!e.test(o.className);)o=o.parentNode;o&&(l=(o.className.match(e)||[,""])[1],i=t.languages[l]),n.className=n.className.replace(e,"").replace(/\s+/g," ")+" language-"+l,o=n.parentNode,/pre/i.test(o.nodeName)&&(o.className=o.className.replace(e,"").replace(/\s+/g," ")+" language-"+l);var s=n.textContent,u={element:n,language:l,grammar:i,code:s};if(!s||!i)return t.hooks.run("complete",u),void 0;if(t.hooks.run("before-highlight",u),a&&_self.Worker){var g=new Worker(t.filename);g.onmessage=function(e){u.highlightedCode=e.data,t.hooks.run("before-insert",u),u.element.innerHTML=u.highlightedCode,r&&r.call(u.element),t.hooks.run("after-highlight",u),t.hooks.run("complete",u)},g.postMessage(JSON.stringify({language:u.language,code:u.code,immediateClose:!0}))}else u.highlightedCode=t.highlight(u.code,u.grammar,u.language),t.hooks.run("before-insert",u),u.element.innerHTML=u.highlightedCode,r&&r.call(n),t.hooks.run("after-highlight",u),t.hooks.run("complete",u)},highlight:function(e,a,r){var l=t.tokenize(e,a);return n.stringify(t.util.encode(l),r)},tokenize:function(e,n){var a=t.Token,r=[e],l=n.rest;if(l){for(var i in l)n[i]=l[i];delete n.rest}e:for(var i in n)if(n.hasOwnProperty(i)&&n[i]){var o=n[i];o="Array"===t.util.type(o)?o:[o];for(var s=0;s<o.length;++s){var u=o[s],g=u.inside,c=!!u.lookbehind,f=0,h=u.alias;u=u.pattern||u;for(var p=0;p<r.length;p++){var d=r[p];if(r.length>e.length)break e;if(!(d instanceof a)){u.lastIndex=0;var m=u.exec(d);if(m){c&&(f=m[1].length);var y=m.index-1+f,m=m[0].slice(f),v=m.length,k=y+v,b=d.slice(0,y+1),w=d.slice(k+1),P=[p,1];b&&P.push(b);var A=new a(i,g?t.tokenize(m,g):m,h);P.push(A),w&&P.push(w),Array.prototype.splice.apply(r,P)}}}}}return r},hooks:{all:{},add:function(e,n){var a=t.hooks.all;a[e]=a[e]||[],a[e].push(n)},run:function(e,n){var a=t.hooks.all[e];if(a&&a.length)for(var r,l=0;r=a[l++];)r(n)}}},n=t.Token=function(e,t,n){this.type=e,this.content=t,this.alias=n};if(n.stringify=function(e,a,r){if("string"==typeof e)return e;if("Array"===t.util.type(e))return e.map(function(t){return n.stringify(t,a,e)}).join("");var l={type:e.type,content:n.stringify(e.content,a,r),tag:"span",classes:["token",e.type],attributes:{},language:a,parent:r};if("comment"==l.type&&(l.attributes.spellcheck="true"),e.alias){var i="Array"===t.util.type(e.alias)?e.alias:[e.alias];Array.prototype.push.apply(l.classes,i)}t.hooks.run("wrap",l);var o="";for(var s in l.attributes)o+=(o?" ":"")+s+'="'+(l.attributes[s]||"")+'"';return"<"+l.tag+' class="'+l.classes.join(" ")+'" '+o+">"+l.content+"</"+l.tag+">"},!_self.document)return _self.addEventListener?(_self.addEventListener("message",function(e){var n=JSON.parse(e.data),a=n.language,r=n.code,l=n.immediateClose;_self.postMessage(t.highlight(r,t.languages[a],a)),l&&_self.close()},!1),_self.Prism):_self.Prism;var a=document.getElementsByTagName("script");return a=a[a.length-1],a&&(t.filename=a.src,document.addEventListener&&!a.hasAttribute("data-manual")&&document.addEventListener("DOMContentLoaded",t.highlightAll)),_self.Prism}();"undefined"!=typeof module&&module.exports&&(module.exports=Prism),"undefined"!=typeof global&&(global.Prism=Prism);
+</script>
+<script type="text/javascript">
+Prism.languages.clike={comment:[{pattern:/(^|[^\\])\/\*[\w\W]*?\*\//,lookbehind:!0},{pattern:/(^|[^\\:])\/\/.*/,lookbehind:!0}],string:/(["'])(\\(?:\r\n|[\s\S])|(?!\1)[^\\\r\n])*\1/,"class-name":{pattern:/((?:\b(?:class|interface|extends|implements|trait|instanceof|new)\s+)|(?:catch\s+\())[a-z0-9_\.\\]+/i,lookbehind:!0,inside:{punctuation:/(\.|\\)/}},keyword:/\b(if|else|while|do|for|return|in|instanceof|function|new|try|throw|catch|finally|null|break|continue)\b/,"boolean":/\b(true|false)\b/,"function":/[a-z0-9_]+(?=\()/i,number:/\b-?(?:0x[\da-f]+|\d*\.?\d+(?:e[+-]?\d+)?)\b/i,operator:/--?|\+\+?|!=?=?|<=?|>=?|==?=?|&&?|\|\|?|\?|\*|\/|~|\^|%/,punctuation:/[{}[\];(),.:]/};
+</script>
+<script type="text/javascript">
+Prism.languages.javascript=Prism.languages.extend("clike",{keyword:/\b(as|async|await|break|case|catch|class|const|continue|debugger|default|delete|do|else|enum|export|extends|finally|for|from|function|get|if|implements|import|in|instanceof|interface|let|new|null|of|package|private|protected|public|return|set|static|super|switch|this|throw|try|typeof|var|void|while|with|yield)\b/,number:/\b-?(0x[\dA-Fa-f]+|0b[01]+|0o[0-7]+|\d*\.?\d+([Ee][+-]?\d+)?|NaN|Infinity)\b/,"function":/[_$a-zA-Z\xA0-\uFFFF][_$a-zA-Z0-9\xA0-\uFFFF]*(?=\()/i}),Prism.languages.insertBefore("javascript","keyword",{regex:{pattern:/(^|[^\/])\/(?!\/)(\[.+?]|\\.|[^\/\\\r\n])+\/[gimyu]{0,5}(?=\s*($|[\r\n,.;})]))/,lookbehind:!0}}),Prism.languages.insertBefore("javascript","class-name",{"template-string":{pattern:/`(?:\\`|\\?[^`])*`/,inside:{interpolation:{pattern:/\$\{[^}]+\}/,inside:{"interpolation-punctuation":{pattern:/^\$\{|\}$/,alias:"punctuation"},rest:Prism.languages.javascript}},string:/[\s\S]+/}}}),Prism.languages.markup&&Prism.languages.insertBefore("markup","tag",{script:{pattern:/(<script[\w\W]*?>)[\w\W]*?(?=<\/script>)/i,lookbehind:!0,inside:Prism.languages.javascript,alias:"language-javascript"}}),Prism.languages.js=Prism.languages.javascript;
+</script>
+<script type="text/javascript">
+Prism.languages.markup={comment:/<!--[\w\W]*?-->/,prolog:/<\?[\w\W]+?\?>/,doctype:/<!DOCTYPE[\w\W]+?>/,cdata:/<!\[CDATA\[[\w\W]*?]]>/i,tag:{pattern:/<\/?(?!\d)[^\s>\/=.$<]+(?:\s+[^\s>\/=]+(?:=(?:("|')(?:\\\1|\\?(?!\1)[\w\W])*\1|[^\s'">=]+))?)*\s*\/?>/i,inside:{tag:{pattern:/^<\/?[^\s>\/]+/i,inside:{punctuation:/^<\/?/,namespace:/^[^\s>\/:]+:/}},"attr-value":{pattern:/=(?:('|")[\w\W]*?(\1)|[^\s>]+)/i,inside:{punctuation:/[=>"']/}},punctuation:/\/?>/,"attr-name":{pattern:/[^\s>\/]+/,inside:{namespace:/^[^\s>\/:]+:/}}}},entity:/&#?[\da-z]{1,8};/i},Prism.hooks.add("wrap",function(a){"entity"===a.type&&(a.attributes.title=a.content.replace(/&amp;/,"&"))}),Prism.languages.xml=Prism.languages.markup,Prism.languages.html=Prism.languages.markup,Prism.languages.mathml=Prism.languages.markup,Prism.languages.svg=Prism.languages.markup;
+</script>
+</body>
+
+</html>

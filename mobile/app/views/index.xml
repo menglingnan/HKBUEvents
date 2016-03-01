@@ -1,0 +1,52 @@
+<Alloy>
+	<Collection src="webNews" />
+	<Collection src="venues" />
+	<Collection src="department" />
+	<Collection src="UserList" />
+	<!-- <Collection src="RegList" /> -->
+
+	<TabGroup>
+		<Tab title="HKBU News" icon="KS_nav_ui.png" id="webNews">
+			<Window title="HKBU News">
+				<TableView dataCollection="webNews" onClick="eventClick">
+					<TableViewRow layout="vertical" name="{name}">
+						<ImageView image="{image}" top="20dp" />
+						<Label text="{name}" bottom="20dp" />
+						<Label text="{shortDes}" bottom="20dp" />
+					</TableViewRow>
+				</TableView>
+			</Window>
+		</Tab>
+		<Tab id="department" title="Department" icon="KS_nav_ui.png">
+			<Window title="Dept">
+					<TableView onClick="FacultyClick" dataCollection="department" dataTransform="deptTransform">
+						<TableViewSection  headerTitle="{FAC}">
+							<TableViewRow title="{deptName}" dept="{dept}" deptName="{deptName}"/>
+						</TableViewSection>
+					</TableView> 
+
+			</Window>
+		</Tab>
+		<Tab id="venuesTab" title="Venues" icon="KS_nav_ui.png">
+			<Window title="Venues">
+					<TableView onClick="VenueClick" dataCollection="venues" dataTransform="campusTransform">
+						<TableViewSection  headerTitle="{CAMPUS}">
+							<TableViewRow title="{VenueName}" VenueID="{VenueID}"/>
+						</TableViewSection>
+					</TableView> 
+			</Window>
+		</Tab>
+		<Tab id="mapTab" title="Map" icon="KS_nav_views.png"> 
+			<Window title="Map" navBarHidden="true">
+				<Module id="mapView" module="ti.map" method="createView" userLocation="true" dataCollection="venues" dataTransform="mapTransform" onClick="mapClicked"/>
+			</Window>
+		</Tab>
+
+		<Tab id="logTab" title="Me" icon="KS_nav_views.png">
+			<Window id="userWin">
+
+			</Window>
+            
+        </Tab>
+	</TabGroup>
+</Alloy>

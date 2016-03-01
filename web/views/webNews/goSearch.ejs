@@ -1,0 +1,125 @@
+<script type="text/javascript">
+document.getElementById("search").className = "active";
+</script>
+<div class="container"> 
+  <div class="col-sm-12">
+  <div class="row">   
+    <div class="col-sm-6">
+        <div class="row"> 
+          <% WebNews.forEach( function(model) { 
+            if(model.highlighted=="checked")
+              star="glyphicon glyphicon-star";
+            else star="glyphicon glyphicon-star-empty";
+          %>
+          <div class="panel panel-default" style="height:200px;">
+            <div class="panel-heading" style="overflow:hidden;">
+              <nobr><span class="<%=star%>" aria-hidden="true"></span>
+                <a style="color:black;text-decoration:none;" href="/../WebNews/view/<%=model.id%>">
+                <b><%=model.name%></b></a></nobr>
+            </div>
+            
+            <div class="panel-body" >
+              <div class="row"> 
+                <div class="col-xs-4">
+                <a style="color:black;text-decoration:none;" href="/../WebNews/view/<%=model.id%>">
+                   <img src="<%=model.image%>" style="max-width:100%;height:135px;object-fit:cover;display:block; margin:auto;" class="img-rounded"/>
+                </a>
+                </div>
+                <div class="col-xs-8">
+                
+                  <a style="color:black;text-decoration:none;" href="/../WebNews/view/<%=model.id%>">
+                    <p style="min-height:140px;max-height:140px;overflow:hidden;">
+                    <%=model.shortDes%></p>
+                  </a>
+                </div>
+            </div>
+            </div>
+          </div>
+        <% }); %>
+        </div>
+
+      </div>
+      <%=%>
+    
+    <div class="col-sm-6"> 
+      <nav>
+        <ul class="pagination">
+          <li>
+            <a href="/WebNews/goSearch/?page=<%=Math.max(current-1, 1)%><%=str%>" aria-label="Previous">
+              <span aria-hidden="true">&laquo;</span>
+            </a>
+          </li>
+        <% for (i = 1; i <= count; i++) { %>
+          <li><a href="/WebNews/goSearch/?page=<%=i%><%=str%>"> <%=i%> </a></li>
+        <%}%>
+ 
+          <li>
+            <a href="/WebNews/goSearch/?page=<%=Math.min(current*1+1, count)%><%=str%>" aria-label="Next">
+              <span aria-hidden="true">&raquo;</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+<!-- ----------------------------------------------------------------- -->
+<h2 class="col-sm-offset-1">Events Create form</h2>
+<form action="/WebNews/goSearch" method="GET" class="form-horizontal">
+  <div class="form-group">
+    <label class="control-label col-sm-4">Event Name: </label>
+    <div class="col-sm-8">
+      <input class="form-control" name="name" type="text">
+    </div>
+  </div>
+
+
+  <div class="form-group">
+    <label class="control-label col-sm-4">Venue: </label>
+    <div class="col-sm-8">
+      <select class="form-control" name="venue">
+          <option value="">Select Venue Here</option>
+          <option>AC Hall</option>
+          <option>SWT501</option>
+          <option>RRS638</option>
+          <option>AAB201</option>
+        </select>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label class="control-label col-sm-4">Organizer: </label>
+    <div class="col-sm-8">
+      <select class="form-control" name="organizer">
+          <option value="">Select Organizer Here</option>
+          <option>Computer Science</option>
+          <option>Music Society</option>
+          <option>Government and International Studies</option>
+          <option>Academic of Film</option>
+        </select>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label class="control-label col-sm-4">Date: </label>
+    <div class="col-sm-8">
+      <input class="form-control" name="date" type="date">
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="control-label col-sm-4"></label>
+    <div class="col-sm-8">
+      <button class="btn btn-default" type="submit" value="ADD">  Submit
+  </button>
+    </div>
+  </div>
+  
+</form>
+
+
+<!-- ----------------------------------------------------------------- -->
+
+
+    </div>
+  </div>  
+</div>
+</div>
+
+

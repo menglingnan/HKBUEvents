@@ -1,0 +1,24 @@
+<Alloy>
+	<Collection src="UserList" />
+	<!-- <Collection src="RegList" /> -->
+	<Window id="win" title="Log in">
+		<LeftNavButton title=""></LeftNavButton>
+		<TableView>
+			<TableViewSection headerTitle="">
+				<TableViewRow layout="horizontal">
+					<Label top="10" left="10" >Username</Label>
+					<TextField id="username" borderStyle="Ti.UI.INPUT_BORDERSTYLE_ROUNDED" color="#336699" top="10" left="10" width="300" height="40" />
+				</TableViewRow>
+			</TableViewSection>
+			<TableViewSection headerTitle="">
+				<TableViewRow layout="horizontal">
+					<Label top="10" left="10">Password</Label>
+					<TextField id="password" borderStyle="Ti.UI.INPUT_BORDERSTYLE_ROUNDED" color="#336699" top="10" left="10" width="300" height="40" passwordMask="true"/>
+				</TableViewRow>
+				<TableViewRow layout="vertical">
+					<Button id="logBt" title="Login" onClick="login"></Button>
+				</TableViewRow>
+			</TableViewSection>
+		</TableView>
+	</Window>
+</Alloy>

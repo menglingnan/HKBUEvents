@@ -1,0 +1,11 @@
+<div class="container"> 
+	<h2 class="col-sm"><%=WebNews.name %></h2>
+<table class="table table-hover">
+  <% WebNews.registeredBy.forEach( function(model) { %>
+      <tr>
+      	<td><%=model.username%></td>
+        <td><%=model.role%></td>
+      </tr>
+  <% }); %>
+</table>
+</div>

@@ -1,0 +1,43 @@
+<script type="text/javascript">
+document.getElementById("index").className = "active";
+</script>
+<div class="container"> 
+  <div class="col-sm-12">
+	<div class="row">		
+		<% WebNews.forEach( function(model) { 
+        if(model.highlighted=="checked")
+          star="glyphicon glyphicon-star";
+        else star="glyphicon glyphicon-star-empty";
+      %>
+			<div class="col-sm-6">
+        <div class="row"> 
+				  <div class="panel panel-default" style="height:200px;">
+            <div class="panel-heading" style="overflow:hidden;">
+              <nobr><span class="<%=star%>" aria-hidden="true"></span>
+  					   <b><a style="color:black;text-decoration:none;" href="/../WebNews/view/<%=model.id%>"><%=model.name%></a></b></nobr>
+  					</div>
+            
+  					<div class="panel-body">
+              <div class="row"> 
+  						  <div class="col-xs-4" >
+                  <a style="color:black;text-decoration:none;" href="/../WebNews/view/<%=model.id%>">
+  							   <img src="<%=model.image%>" style="height:135px;object-fit:cover;overflow:hidden;max-width:100%;display:block; margin:auto;" class="img-rounded"/>
+                  </a>
+  						  </div>
+  						  <div class="col-xs-8">
+                
+                  <a style="color:black;text-decoration:none;" href="/../WebNews/view/<%=model.id%>">
+                    <p style="min-height:140px;max-height:140px;overflow:hidden;">
+                    <%=model.shortDes%></p>
+                  </a>
+  						</div>
+            </div>
+  					</div>
+  				</div>
+        </div>
+			
+			</div>
+		<% }); %>
+	</div>	
+
+</div>

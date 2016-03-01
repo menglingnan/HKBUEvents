@@ -1,0 +1,15 @@
+<h2>Person Create form</h2>
+
+<form action="/person/update/<%=person.id%>" method="POST">
+	<div>
+		<label>Name</label>
+		<input name="Person[name]" type="text" value="<%=person.name%>">
+	</div>
+
+	<div>
+		<label>Age</label>
+		<input name="Person[age]" type="text" value="<%=person.age%>">
+	</div>
+
+	<button type="submit" value="ADD">Update</button>
+</form>

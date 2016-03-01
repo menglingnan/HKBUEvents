@@ -1,0 +1,15 @@
+<script type="text/javascript">
+document.getElementById("admin").className = "active";
+</script>
+<div class="container"> 
+	<h2 class="col-sm">Events Information</h2>
+<table class="table table-hover">
+  <% WebNews.forEach( function(model) { %>
+      <tr><td><%=model.name%></td>
+      	<td><a href="/../WebNews/showRegisteredBy/<%=model.id%>">Registration</a></td>
+        <td><a href="/../WebNews/update/<%=model.id%>">Edit</a></td>
+        <td><a href="/../WebNews/delete/<%=model.id%>">Delete</a></td>
+      </tr>
+  <% }); %>
+</table>
+</div>

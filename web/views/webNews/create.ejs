@@ -1,0 +1,106 @@
+<script type="text/javascript">
+document.getElementById("create").className = "active";
+</script>
+<div class="container"> 
+<h2 class="col-sm-offset-1">Events Create form</h2>
+<form action="/WebNews/create" method="POST" class="form-horizontal">
+	<div class="form-group">
+		<label class="control-label col-sm-2">Name: </label>
+		<div class="col-sm-8">
+			<input class="form-control" name="WebNews[name]" type="text" required>
+		</div>
+	</div>
+
+	<div class="form-group">
+		<label class="control-label col-sm-2">Short Description: </label>
+		<div class="col-sm-8">
+			<input class="form-control" name="WebNews[shortDes]" type="text" required>
+		</div>
+	</div>
+
+	<div class="form-group">
+		<label class="control-label col-sm-2">Full Description: </label>
+		<div class="col-sm-8">
+			<TextArea  class="form-control" rows="5" name="WebNews[fullDes]" rows="6" required></TextArea>
+		</div>
+	</div>
+
+	<div class="form-group">
+		<label class="control-label col-sm-2">Image URL: </label>
+		<div class="col-sm-8">
+			<input class="form-control" name="WebNews[image]" type="url" required>
+		</div>
+	</div>
+	
+	<div class="form-group">
+		<label class="control-label col-sm-2">Venue: </label>
+		<div class="col-sm-8">
+			<select class="form-control" name="WebNews[venue]">
+    			<option>AC Hall</option>
+    			<option>SWT501</option>
+    			<option>RRS638</option>
+    			<option>AAB201</option>
+  			</select>
+		</div>
+	</div>
+	
+
+	<div class="form-group">
+		<label class="control-label col-sm-2">Organizer: </label>
+		
+		<div class="col-sm-8">
+		
+			
+			<select class="form-control" name="WebNews[organizer]">
+			<% if(req.session.userInfo.role!="admin"){%>
+				<option><%=req.session.userInfo.dept%></option>
+			<%} else{%>
+    			<option>Computer Science</option>
+    			<option>Music Society</option>
+    			<option>Government and International Studies</option>
+    			<option>Academic of Film</option>
+    		<%} %>
+  			</select>
+		</div>
+		
+	</div>
+
+
+	<div class="form-group">
+		<label class="control-label col-sm-2">Date: </label>
+		<div class="col-sm-8">
+			<input class="form-control" name="WebNews[date]" type="date" required>
+		</div>
+	</div>
+
+	<div class="form-group">
+		<label class="control-label col-sm-2">Start Time: </label>
+		<div class="col-sm-8">
+			<input class="form-control" name="WebNews[startTime]" type="time" required>
+		</div>
+	</div>
+
+	<div class="form-group">
+		<label class="control-label col-sm-2">End Time: </label>
+		<div class="col-sm-8">
+			<input class="form-control" name="WebNews[endTime]" type="time" required>
+		</div>
+	</div>
+
+	<div class="form-group">
+		<label class="control-label col-sm-2">Quota: </label>
+		<div class="col-sm-8">
+			<input class="form-control" name="WebNews[quota]" type="number" min="0" max="10000" required>
+		</div>
+	</div>
+	<div class="form-group">
+		<label class="control-label col-sm-2">Highlight Event: </label>
+		<div class="col-sm-8">
+			<label class="checkbox-inline"><input type="checkbox" name="WebNews[highlighted]" value="checked"> &nbsp;</label>
+		</div>
+	</div>
+
+	<button class="btn btn-default col-sm-offset-2" type="submit" value="ADD">	Submit
+	</button>
+</form>
+</div>

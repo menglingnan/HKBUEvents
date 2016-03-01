@@ -1,0 +1,23 @@
+<Alloy>
+	<Collection src="UserList" />
+	<!-- <Collection src="RegList" /> -->
+	<Window title="Me">
+		<LeftNavButton title=""></LeftNavButton>
+		<TableView id="userInfo" dataCollection="UserList" dataFilter="userFilter">
+			<TableViewSection headerTitle="">
+				<TableViewRow>
+					<ImageView image="uimage1.png" left="100dp" height="140dp" width="140dp" borderWidth="1"/>
+				</TableViewRow>
+			</TableViewSection>
+			<TableViewSection headerTitle="">
+				<TableViewRow title="{username}" onClick="regedEvent"/>
+			</TableViewSection>
+			<TableViewSection headerTitle="">
+				<TableViewRow title="Registered Event" onClick="regedEvent"/>
+			</TableViewSection>
+			<TableViewSection headerTitle="">
+				<TableViewRow title="Log out" onClick="logout"/>
+			</TableViewSection>
+		</TableView>
+	</Window>
+</Alloy>

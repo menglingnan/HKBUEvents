@@ -1,0 +1,99 @@
+<div class="container"> 
+<h2 class="col-sm-offset-1">Events Update form</h2>
+<form action="/WebNews/update/<%=WebNews.id%>" method="POST"  class="form-horizontal">
+	<div class="form-group">
+		<label class="control-label col-sm-2">Name: </label>
+		<div class="col-sm-8">
+			<input class="form-control" name="WebNews[name]" type="text" value="<%=WebNews.name%>">
+		</div>
+	</div>
+
+	<div class="form-group">
+		<label class="control-label col-sm-2">Short Description: </label>
+		<div class="col-sm-8">
+			<input class="form-control" name="WebNews[shortDes]" type="text" value="<%=WebNews.shortDes%>">
+		</div>
+	</div>
+
+	<div class="form-group">
+		<label class="control-label col-sm-2">Full Description: </label>
+		<div class="col-sm-8">
+			<TextArea  class="form-control" rows="5" name="WebNews[fullDes]"><%=WebNews.fullDes%></TextArea>
+		</div>
+	</div>
+
+	<div class="form-group">
+		<label class="control-label col-sm-2">Image URL: </label>
+		<div class="col-sm-8">
+			<input class="form-control" name="WebNews[image]" type="url" value="<%=WebNews.image%>">
+		</div>
+	</div>
+
+	<div class="form-group">
+		<label class="control-label col-sm-2">Venue: </label>
+		<div class="col-sm-8">
+			<select class="form-control" name="WebNews[venue]" >
+				<option><%=WebNews.venue%></option>
+				<option disabled></option>
+    			<option>AAB201</option>
+    			<option>AC Hall</option>
+    			<option>SWT501</option>
+    			<option>RRS638</option>
+    			
+  			</select>
+		</div>
+	</div>
+
+
+	<div class="form-group">
+		<label class="control-label col-sm-2">Organizer: </label>
+		<div class="col-sm-8">
+			<select class="form-control" name="WebNews[organizer]">
+				<option><%=WebNews.organizer%></option>
+				<option disabled></option>
+    			<option value="Computer Science">Computer Science</option>
+    			<option value="Music Society">Music Society</option>
+    			<option value="Government and International Studies">Government and International Studies</option>
+    			<option value="Academic of Film">Academic of Film</option>
+  			</select>
+		</div>
+	</div>
+
+	<div class="form-group">
+		<label class="control-label col-sm-2">Date: </label>
+		<div class="col-sm-8">
+			<input class="form-control" name="WebNews[date]" type="date" value="<%=WebNews.date%>">
+		</div>
+	</div>
+
+	<div class="form-group">
+		<label class="control-label col-sm-2">Start Time: </label>
+		<div class="col-sm-8">
+			<input class="form-control" name="WebNews[startTime]" type="time" value="<%=WebNews.startTime%>">
+		</div>
+	</div>
+
+	<div class="form-group">
+		<label class="control-label col-sm-2">End Time: </label>
+		<div class="col-sm-8">
+			<input class="form-control" name="WebNews[endTime]" type="time" value="<%=WebNews.endTime%>">
+		</div>
+	</div>
+
+	<div class="form-group">
+		<label class="control-label col-sm-2">Quota: </label>
+		<div class="col-sm-8">
+			<input class="form-control" name="WebNews[quota]" type="number" min="0" max="10000" value="<%=WebNews.quota%>">
+		</div>
+	</div>
+	<div class="form-group">
+		<label class="control-label col-sm-2">Highlight Event: </label>
+		<div class="col-sm-8">
+			<label class="checkbox-inline"><input type="checkbox" name="WebNews[highlighted]" value="checked" <%=WebNews.highlighted%>> &nbsp;</label>
+		</div>
+	</div>
+
+	<button class="btn btn-default col-sm-offset-2" type="submit" value="ADD">	Update
+	</button>
+</form>
+</div>

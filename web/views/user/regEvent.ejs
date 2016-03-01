@@ -1,0 +1,15 @@
+<div class="container"> 
+    <h2 class="col-sm"><%=User.username %>'s Registered Events</h2>
+<table class="table table-hover">
+  <% User.register.forEach( function(model) { %>
+      <tr>
+      	<td><a href="/../WebNews/view/<%=model.id%>"><%=model.name%></a></td>
+      	<td><%=model.date%></td>
+      	<td><%=model.startTime%></td>
+      	<td><%=model.endTime%></td>
+      	<td><%=model.venue%></td>
+        <td><a href="/../User/removeRegister?pid=<%=model.id%>">UnReg</a></td>
+      </tr>
+  <% }); %>
+</table>
+</div>

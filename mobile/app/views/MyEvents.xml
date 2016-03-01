@@ -1,0 +1,8 @@
+<Alloy>
+	<Collection src="regList" />
+	<Window id='win'>
+		<TableView dataCollection="regList" onClick="eventClick">
+			<TableViewRow name="{name}" title='{name}' />				
+		</TableView>
+	</Window>
+</Alloy>

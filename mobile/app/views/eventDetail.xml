@@ -1,0 +1,25 @@
+<Alloy>
+	<Collection src="webNews" />
+	<Collection src="venues"/>
+	<Collection src="UserList"/>
+	<Collection src="regList"/>
+	<Window id='win'>
+		<RightNavButton>
+			<Button id="regButton" onClick="Register"/>
+		</RightNavButton>
+		<TableView dataCollection="webNews" dataFilter="eventFilter" onClick="findAddress">
+			<TableViewRow layout="vertical">
+				<ImageView image="{image}" top="20dp" />
+				<Label text="{name}" bottom="20dp" />
+				<Label text="{fullDes}" bottom="20dp" />
+				<Button title="{venue}" venue="{venue}"></Button>
+			</TableViewRow>
+		</TableView>
+		<AlertDialog id="regit" onClick="confirm" cancel="1">
+			<ButtonNames>
+				<ButtonName>Confirm</ButtonName>
+				<ButtonName>Cancel</ButtonName>
+			</ButtonNames>
+		</AlertDialog>
+	</Window>
+</Alloy>
